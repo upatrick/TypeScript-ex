@@ -1,0 +1,33 @@
+"use strict";
+let preco = Number(prompt("Valor do produto:"));
+let parcelas = Number(prompt("Número de parcelas:"));
+let valorParcelas = 0;
+let precoTotal = 0;
+let parcelaTotal = 0;
+const animal = prompt("Informe seu animal: ");
+switch (animal) {
+    case 'cachorro':
+        // lógica executada caso for cachorro
+        document.write("🐶");
+        break;
+}
+if (parcelas == 1) {
+    parcelaTotal = preco - preco * 0.025;
+    console.log("Você pagará R$", parcelaTotal, "no produto.");
+}
+else if (parcelas >= 2 && parcelas <= 5) {
+    console.log("Você pagará R$", preco, "no produto.");
+}
+else if (parcelas >= 6 && parcelas <= 10) {
+    precoTotal = preco + preco * 0.06;
+    valorParcelas = precoTotal / parcelas;
+    console.log("Você pagará R$", precoTotal, "no produto.");
+    console.log("Você pagará ", parcelas, " parcelas de R$", valorParcelas.toFixed(2));
+}
+else if (parcelas >= 11 && parcelas <= 15) {
+    precoTotal = preco + preco * 0.13;
+    valorParcelas = precoTotal / parcelas;
+    console.log("Você pagará R$", precoTotal, "no produto.");
+    console.log("Você pagará ", parcelas, " parcelas de R$", valorParcelas.toFixed(2));
+}
+// 9. Reescreva o exercício 3, utilizando apenas o SWITCH.
